@@ -19,11 +19,11 @@ class GetPicAfterLogin(object):
             'Accept-Language': 'en-US,en;q=0.5',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
             'Accept-Encoding': 'gzip, deflate',
-            'Host': 'www.sexinsex.net',
+            'Host': '', ##target website main page url
             'DNT': '1'
         }
-        self.login_url ='http://www.sexinsex.net/bbs/logging.php?action=login' ##Login page url
-        self.post_url = 'http://www.sexinsex.net/bbs/logging.php?action=login&' ##Login link string 
+        self.login_url ='' ##Login page url
+        self.post_url = '' ##Login link string 
         ##self.logined_url = 'https://github.com/settings/profile'
         
         ##Get session and save in same directory
@@ -88,7 +88,7 @@ class GetPicAfterLogin(object):
 
 if __name__ == "__main__":
     GPAL = GetPicAfterLogin()
-    res = GPAL.login_post(username = 'addr', password = 'plmokn123') ##Type user name and password
+    res = GPAL.login_post(username = '', password = '') ##Type user name and password
     if(res==True):
         print('Successful login')
         print('Paste the page URL you want:')
